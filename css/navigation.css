@@ -1,0 +1,162 @@
+body{
+  background-color: white;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins' , sans-serif;
+}
+
+.container{
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: 870px;
+  border:  solid #0a53be 3px;
+}
+.navbar {
+  background-color: rgba(68, 10, 41, 0.9); /* Adjust the alpha (fourth value) for transparency */
+  border-radius: 10px; /* Optional: Add border-radius for a softer look */
+  backdrop-filter: blur(1px)!important;
+  z-index: 9999;
+}
+.content h1{
+  position: absolute;
+  top: 45vh;
+  left: 1vw;
+  font-size: 80px;
+  color: silver;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.content h1:hover{
+  -webkit-text-stroke: 2px #ffff;
+  color: transparent;
+}
+.content h2{
+  position: absolute;
+  top: 32vh;
+  left: 6vw;
+  font-size: 80px;
+  color: silver;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.content h2:hover{
+  -webkit-text-stroke: 2px #ffff;
+  color: transparent;
+}
+
+.content a{
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  font-size: 24px;
+  border: 2px solid white;
+  padding: 14px 70px;
+  border-radius: 50px;
+  margin-top: 20px;
+}
+.logo{
+  filter: drop-shadow(18px 7px 5px gold);
+  width: 90px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+#navbarNav .navbar-nav .nav-item a {
+  /*color: gold;*/
+}
+
+/*navbar hover effect*/
+
+.navbar-nav .nav-link {
+  position: relative;
+
+  background: linear-gradient(to top, gold, grey);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-nav .nav-link:before, .navbar-nav .nav-link:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  /*background-color: mediumvioletred; !* Adjust the color as needed *!*/
+  background: linear-gradient(to top, gold, grey);
+  transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:before {
+  left: 50%;
+}
+
+.navbar-nav .nav-link:after {
+  right: 50%;
+}
+
+.navbar-nav .nav-link:hover:before, .navbar-nav .nav-link:hover:after {
+  width: 50%;
+}
+.navbar-nav .nav-item a {
+  transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-item a:hover {
+  /*transform: scale(1.2);*/
+  transform: scale(0.9);
+}
+
+/*Logo Animations*/
+@keyframes rotation {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+  50% {
+    transform: rotate3d(0, 1, 0, 90deg);
+  }
+  /*100% {*/
+  /*    transform: rotate3d(0, 1, 0, 180deg);*/
+  /*}*/
+}
+
+.coin {
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  width: 85px;
+  height: 72px;
+  animation-name: rotation;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  transform: rotateY(0deg);
+  transform-style: preserve-3d;
+  border:  solid #6f42c1 3px;
+}
+
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  backface-visibility: hidden;
+}
+
+.heads {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+#navigation-section{
+  border:  solid #896c3b 3px;
+  height: 82px;
+}
